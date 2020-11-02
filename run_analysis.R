@@ -36,7 +36,7 @@ remove(x_test); remove(y_test); remove(s_test)
 feature <- data.table::fread("./UCI HAR Dataset/features.txt")
 activity <- data.table::fread("./UCI HAR Dataset/activity_labels.txt")
 
-grep("mean\\(\\)|std\\(\\)", feature[,2], value=TRUE)
+selectedFeatures <- grep("mean\\(\\)|std\\(\\)", feature[,2], value=TRUE)
 
 # 3.-
 #Uses descriptive activity names to name the activities in the data set
